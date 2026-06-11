@@ -68,6 +68,9 @@
     </style>
   </head>
   <body>
+    <!-- Toggle Button -->
+    <button class="theme-toggle-btn" id="themeToggle" onclick="toggleTheme()">Switch Theme</button>
+    
     <h1>Hi, I'm Valeria!</h1>
  
     <h2>About Me</h2>
@@ -89,5 +92,23 @@
     <p>Check out my CAD model: 
       <a href="https://cad.onshape.com/documents/6f352d639786414bdd9553a5/w/cdbf69dbed3f3388fbd3a9bc/e/99134013273f7c1c9fdbc410?renderMode=0&uiState=6a22da6880fee1c331b11401" target="_blank">Onshape CAD Project</a>
     </p>
+
+     <!-- JavaScript for Toggle Functionality -->
+    <script>
+      function toggleTheme() {
+        const body = document.body;
+        const btn = document.getElementById('themeToggle');
+        
+        // Toggle the light mode class
+        body.classList.toggle('light-mode');
+        
+        // Update button text based on current mode
+        if (body.classList.contains('light-mode')) {
+          btn.textContent = 'Dark Mode';
+        } else {
+          btn.textContent = 'Light Mode';
+        }
+      }
+    </script>
   </body>
 </html>
